@@ -1,0 +1,13 @@
+body {
+    font-family: 'Junge', serif; 
+    background-color:#333436;
+    color:#e6e6e6;
+}
+
+input.textin
+{
+    border: 0px solid #FFFFFF;
+    color: #e6e6e6;
+    background-color: transparent;
+    font-family: 'Junge', serif; 
+}
