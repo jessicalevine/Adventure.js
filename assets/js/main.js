@@ -118,15 +118,17 @@ var AMANTIA = (function() {
     }//run function
     
     function submit(ev) {
-        ev.target.parentNode.appendChild(document.createElement("br"));
-        ev.target.parentNode.appendChild(document.createElement("br"));
-        
         //Handle current command
         var response = "I am sorry, I do not know how to do that.";
         
         var input = ev.target.value;
         var cmd = input.split(" ")[0].toLowerCase();
         var argument = input.split(" ")[1].toLowerCase();
+        
+        if (argument != null) {
+            ev.target.parentNode.appendChild(document.createElement("br"));
+            ev.target.parentNode.appendChild(document.createElement("br"));
+        }
         
         if (["go", "travel", "walk", "move"].contains(cmd)) {
             if(["north", "south", "east", "west"].contains(argument)) {
@@ -178,3 +180,4 @@ var AMANTIA = (function() {
 }());
 
 AMANTIA.run();
+
